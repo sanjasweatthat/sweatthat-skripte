@@ -167,7 +167,7 @@
       var list = pool(res[0], opts.dieta);
       var r = opts.recipe || (opts.pick ? opts.pick(list) : pickByDate(list, opts.date));
       var d = opts.date || new Date();
-      el.innerHTML = '<div class="sr-rd"><div class="sr-ph"><img src="' + img(r) + '" alt=""><button class="sr-fav' + (isFav(r.id) ? ' on' : '') + '" data-fav="' + r.id + '" aria-label="Spremi u favorite">' + HEART + '</button></div>' +
+      el.innerHTML = '<div class="sr-rd"><div class="sr-ph"><img loading="lazy" decoding="async" src="' + img(r) + '" alt=""><button class="sr-fav' + (isFav(r.id) ? ' on' : '') + '" data-fav="' + r.id + '" aria-label="Spremi u favorite">' + HEART + '</button></div>' +
         '<div class="sr-rdbd"><div class="sr-kick">Recept dana · ' + d.getDate() + '. ' + (d.getMonth() + 1) + '.</div><h2>' + esc(r.title) + '</h2><div class="sr-meta">' + esc(meta(r)) + '</div>' + macros(r) +
         '<div class="sr-acts"><button class="pri sr-o">' + ICO_OPEN + 'Otvori recept</button><button class="sr-p">' + ICO_PRN + 'Printaj</button>' +
         '<a class="sr-link" href="' + CFG.trazilicaUrl + '">Tražilica recepata →</a></div></div></div>';
